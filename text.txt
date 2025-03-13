@@ -1,0 +1,58 @@
+classe ; 
+    bouffe
+        propriete -> point vie de soif...
+            instance -> quelle bouffe
+    personnage 
+        propriete -> nom, emoji, points de vie
+            instance -> qui comme perso
+    
+    methodes 
+        consommer, soigner, carresser
+
+
+
+
+    classe ; 
+
+        personnage 
+
+        bouffe 
+
+        nombre de jour
+
+        nombre de point 
+
+        creation 
+
+        chercher 
+
+        regles du jeux 
+
+        partie/jeux -> propriete -> nombre de point, nombre de jours, provisions, nombre d'animaux,
+
+
+qu'une seul instance pour avoir qu'une partie d'un coup 
+
+
+
+termine sur redirection 
+
+
+
+classe animale
+
+classe provisions
+
+classe parent aliments 
+
+classe jeux/partie qui contient tout 
+
+chercher creer et chercher -> methode dans le jeux 
+
+classe action -> decompter le nombre de jours, de point, et redirection 
+
+(classe message)
+
+classe action parents chercher 
+
+classe action parent creer
