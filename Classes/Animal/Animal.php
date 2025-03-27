@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes;
+namespace Classes\Animal;
 
 class Animal 
 {
@@ -17,6 +17,14 @@ class Animal
     {
         $this->icon = $icon;
         $this->name = $name;
+    }
+
+    public function consume(Provision $provision)
+    {
+        $this->changeHealth($provision->getHealthPoints());
+        $this->changeMood($provision->getMoodPoints());
+        $this->changeHunger($provision->getHungerPoints());
+        $this->changeThirst($provision->getThirstPoints());
     }
 
     public function isDead()
@@ -132,6 +140,8 @@ class Animal
             // }
         }
     }
+
+   
 
 
     
