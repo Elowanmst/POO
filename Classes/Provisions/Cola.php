@@ -2,7 +2,7 @@
 
 namespace Classes\Provisions; 
 
-class Cola extends Provisions {
+class Cola extends Provision {
 
     public function __construct()
     {
@@ -12,7 +12,7 @@ class Cola extends Provisions {
         $this->moodPoints = '10';
         $this->hungerPoints = '0';
         $this->thirstPoints ='-30' ;
-
+        $this->addictionPoints = '5';
     }
 }
 

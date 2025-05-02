@@ -2,7 +2,7 @@
 
 namespace Classes\Provisions; 
 
-class Watermelon extends Provisions {
+class Watermelon extends Provision {
 
     public function __construct()
     {
@@ -11,7 +11,8 @@ class Watermelon extends Provisions {
       
         $this->hungerPoints = '-20';
         $this->thirstPoints ='-30' ;
-
+        
+        
     }
 }
 

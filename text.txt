@@ -56,3 +56,8 @@ classe action -> decompter le nombre de jours, de point, et redirection
 classe action parents chercher 
 
 classe action parent creer
+
+
+carresser 
+soigner 
+taper

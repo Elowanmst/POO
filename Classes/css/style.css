@@ -1,0 +1,247 @@
+body{
+    background: -webkit-linear-gradient(75deg, #56d8e4, #2ea9b4, #477dd5, #2a68cb); 
+    
+}
+*{
+    font-family: 'Arial', sans-serif;
+   
+}
+
+.message{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: -webkit-linear-gradient(45deg,  #FFD700, #e73e00, #06ff23, #f20ab8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.left-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.button-left,
+.button-right {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button-left:hover,
+.button-right:hover {
+    background-color: #0056b3;
+}
+
+.create-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-form input[type="text"],
+.create-form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.create-form button {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-form button:hover {
+    background-color: #218838;
+}
+
+.animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.animal-card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color:  #f9f9f9; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.animal-card .icon {
+    font-size: 50px;
+}
+
+.animal-card .name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.animal-card .stats {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.provision-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.provision-card{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px;
+    height: 160px;
+    text-align: center;
+    background-color:  #f9f9f9; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.provision-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.provision-card .icon {
+    font-size: 22px;
+}
+
+.provision-card .name {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 3px ;
+}
+
+.provision-card .stats {
+    font-size: 11px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.provision{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 150px;
+    height:40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bouton-provisions{
+    padding: 10px;
+    font-size: 10px;
+    
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+
+.dead-icon {
+    font-size: 40px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}

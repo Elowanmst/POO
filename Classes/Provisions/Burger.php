@@ -2,7 +2,7 @@
 
 namespace Classes\Provisions; 
 
-class Burger extends Provisions 
+class Burger extends Provision
 {
     public function __construct()
     {
@@ -12,5 +12,6 @@ class Burger extends Provisions
         $this->moodPoints = '20';
         $this->hungerPoints = '-100';
         $this->thirstPoints ='30';
+        $this->addictionPoints = '0';
     }
 }

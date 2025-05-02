@@ -2,16 +2,20 @@
 
 namespace Classes\Animal;
 
+use Classes\Game;
+use Classes\Provisions\Provision;
+
 class Animal 
 {
     private $icon;
-    private $names;
+    private $name;
     private $age = 0;
 
     private $health = 100;
     private $mood = 100;
     private $hunger = 50;
     private $thirst = 50;
+    private $addiction = 0;
     
     public function __construct($icon, $name) 
     {
@@ -21,10 +25,21 @@ class Animal
 
     public function consume(Provision $provision)
     {
+
+        if ($provision instanceof \Classes\Provisions\Salade) {
+            $this->saladeConsumed = true;
+            if ($this->addiction >= 100) {
+                $this->addiction = 100;
+                Game::getInstance()->addMessages("{$this->name} est addicte, il doit en manger une au moins une fois par jour");
+                return;
+            }
+        }
+
         $this->changeHealth($provision->getHealthPoints());
         $this->changeMood($provision->getMoodPoints());
         $this->changeHunger($provision->getHungerPoints());
         $this->changeThirst($provision->getThirstPoints());
+        $this->changeAddiction($provision->getAddictionPoints());
     }
 
     public function isDead()
@@ -60,9 +75,15 @@ class Animal
     {
         return $this->thirst;
     }
+    public function getAddiction()
+    {
+        return $this->addiction;
+    }
 
     public function changeHealth ($points)
     {
+        
+
         $this->health += $points;
         if( $this->health > 100)
         {
@@ -89,6 +110,10 @@ class Animal
 
     public function changeHunger ($points)
     {
+        $game = Game::getInstance();
+        $game->addMessages("{$this->name} : {$points} points de faim");
+
+
         $this->hunger += $points;
         if ($this->hunger > 100)
         {
@@ -113,9 +138,21 @@ class Animal
         }
     }
 
+    public function changeAddiction($points)
+    {
+        $this->addiction += $points;
+
+        if ($this->addiction > 100) {
+            $this->addiction = 100;
+        } elseif ($this->addiction < 0) {
+            $this->addiction = 0;
+        }
+    }
+
 
     public function sleep()
     {
+        
         if (! $this->isDead()) {
 
             $this->age++;
@@ -134,12 +171,19 @@ class Animal
             {
                 $this->changeHealth(rand(-20, 0));
             }
+            
+            if ($this->addiction >= 100 && !$this->saladeConsumed) {
+                $this->changeHealth(-30);
+            }
+            $this->saladeConsumed = false;
+            
             // if ($this->health <= 0)
             // {
             //     $this->changeHealth = "mort, decédé, RIP, au trous";
             // }
         }
     }
+
 
    
 

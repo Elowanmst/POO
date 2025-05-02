@@ -2,7 +2,7 @@
 
 namespace Classes\Provisions;
 
-abstract class Provisions
+abstract class Provision
 {
     protected $icon;
     protected $name;
@@ -11,6 +11,7 @@ abstract class Provisions
     protected $moodPoints = 0;
     protected $hungerPoints = 0;
     protected $thirstPoints = 0;
+    protected $addictionPoints = 0;
 
     public function getIcon()
     { 
@@ -40,6 +41,10 @@ abstract class Provisions
     public function getThirstPoints()
     {
         return $this->thirstPoints;
+    }
+    public function getAddictionPoints()
+    {
+        return $this->addictionPoints;
     }
 
 }
